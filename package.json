@@ -1,0 +1,65 @@
+{
+  "name": "color-statistics",
+  "version": "0.0.1",
+  "description": "colored statistics card",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ybzjsxh/color-statistics.git"
+  },
+  "keywords": [
+    "react",
+    "statistics",
+    "card"
+  ],
+  "author": "musiq841",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ybzjsxh/color-statistics/issues"
+  },
+  "homepage": "https://github.com/ybzjsxh/color-statistics#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "assets/*.css",
+    "assets/*.less"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index",
+  "scripts": {
+    "build": "father doc build --storybook",
+    "compile": "father build && lessc assets/bootstrap.less assets/bootstrap.css && lessc assets/bootstrap_white.less assets/bootstrap_white.css",
+    "coverage": "father test --coverage",
+    "lint": "eslint src/ examples/ --ext .tsx,.ts,.jsx,.js",
+    "now-build": "npm run build",
+    "prepublishOnly": "npm run compile && np --no-cleanup --yolo --no-publish",
+    "start": "cross-env NODE_ENV=development father doc dev --storybook",
+    "test": "father test",
+    "gh-pages": "npm run build && father doc deploy"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "rc-tooltip": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/warning": "^3.0.0",
+    "cross-env": "7.0.2",
+    "eslint": "^7.1.0",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "father": "2.29.6",
+    "less": "^3.12.2",
+    "np": "6.3.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.12.2",
+    "react-dom": "^16.12.2"
+  }
+}
