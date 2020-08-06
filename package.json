@@ -27,11 +27,11 @@
     "assets/*.css",
     "assets/*.less"
   ],
-  "main": "lib/index.js",
+  "main": "lib/index",
   "module": "es/index",
   "scripts": {
     "build": "father doc build --storybook",
-    "compile": "father build && lessc assets/bootstrap.less assets/bootstrap.css && lessc assets/bootstrap_white.less assets/bootstrap_white.css",
+    "compile": "father build && lessc src/index.less src/index.css && lessc assets/bootstrap.less assets/bootstrap.css && lessc assets/bootstrap_white.less assets/bootstrap_white.css",
     "coverage": "father test --coverage",
     "lint": "eslint src/ examples/ --ext .tsx,.ts,.jsx,.js",
     "now-build": "npm run build",

@@ -4,19 +4,19 @@ React color-statistics
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![gemnasium deps][gemnasium-image]][gemnasium-url]
+
+<!-- [![Test coverage][coveralls-image]][coveralls-url] -->
+
 [![node version][node-image]][node-url]
 [![npm download][download-image]][download-url]
 
 [npm-image]: https://img.shields.io/npm/v/color-statistics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/color-statistics
-[travis-image]: https://img.shields.io/travis/react-component/color-statistics.svg?style=flat-square
-[travis-url]: https://travis-ci.org/react-component/color-statistics
-[coveralls-image]: https://img.shields.io/coveralls/react-component/color-statistics.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/color-statistics?branch=master
-[gemnasium-image]: https://img.shields.io/gemnasium/react-component/color-statistics.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/color-statistics
+[travis-image]: https://travis-ci.org/ybzjsxh/color-statistics.svg?branch=master
+[travis-url]: https://travis-ci.org/ybzjsxh/color-statistics
+[coveralls-image]: https://img.shields.io/coveralls/ybzjsxh/color-statistics.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/ybzjsxh/color-statistics?branch=master
+[gemnasium-image]: https://img.shields.io/gemnasium/ybzjsxh/color-statistics.svg?style=flat-square
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: https://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/color-statistics.svg?style=flat-square
@@ -44,9 +44,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 ReactDOM.render(
-  <Statistics title='' align='left' type='success' tip={<span>Statistics</span>}>
-    <a href='#'>hover</a>
-  </Statistics>,
+  <Statistics title='' align='left' type='success' tip={<span>Statistics</span>} />,
   container,
 );
 ```
@@ -54,10 +52,9 @@ ReactDOM.render(
 ## Examples
 
 `npm start` and then go to
-<http://localhost:9001/examples>
+<http://localhost:9001>
 
-Online examples: <https://ybzjsxh.github.io/color-statistics/examples/> or
-<https://color-statistics.vercel.app/?path=/story/color-statistics--simple>
+Online examples: [github-pages](https://ybzjsxh.github.io/color-statistics/?path=/story/color-statistics--simple) or [vercel](https://color-statistics.vercel.app/?path=/story/color-statistics--simple)
 
 ## API
 
@@ -65,14 +62,10 @@ Online examples: <https://ybzjsxh.github.io/color-statistics/examples/> or
 
 |  name  |        type         |  default  |                                        description                                         |
 | :----: | :-----------------: | :-------: | :----------------------------------------------------------------------------------------: |
-|  type  |       string        | 'primary' |                      one of ['primary', 'success', 'warning', 'info']                       |
+|  type  |       string        | 'primary' |                      one of ['primary', 'success', 'warning', 'info']                      |
 | align  |       string        |  'right'  | one of ['left','right','top','bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight'] |
 |  tip   | string \| ReactNode |    ''     |                                         tips info                                          |
 | number |  string \| number   |           |                                           number                                           |
-
-## Note
-
-`color-statistics` requires child node accepts `onMouseEnter`, `onMouseLeave`, `onFocus`, `onClick` event.
 
 ## Development
 

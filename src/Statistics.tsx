@@ -2,8 +2,8 @@ import React, { useRef, useImperativeHandle, forwardRef } from 'react';
 import Tooltip from 'rc-tooltip';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { formatNumber } from './_utils';
-import './index.less';
-import '../assets/bootstrap.less';
+import './index.css';
+import '../assets/bootstrap.css';
 
 export interface StatisticsProps {
   type?: 'primary' | 'success' | 'warning' | 'info';
