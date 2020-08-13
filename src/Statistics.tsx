@@ -8,7 +8,7 @@ import '../assets/bootstrap.css';
 export interface StatisticsProps {
   type?: 'primary' | 'success' | 'warning' | 'info';
   title: string | React.ReactNode;
-  tip: string | React.ReactNode;
+  tip?: string | React.ReactNode;
   align?:
     | 'left'
     | 'right'
@@ -19,10 +19,11 @@ export interface StatisticsProps {
     | 'bottomLeft'
     | 'bottomRight';
   number: string | number;
+  showTip?: boolean | string;
 }
 
 const Statistics = (props: StatisticsProps, ref: any) => {
-  const { type = 'primary', tip = '', title, align = 'right', number } = props;
+  const { type = 'primary', tip = '', title, align = 'right', number, showTip = true } = props;
 
   const domRef = useRef(null);
   useImperativeHandle(ref, () => domRef.current);
@@ -31,11 +32,13 @@ const Statistics = (props: StatisticsProps, ref: any) => {
     <div className={`container-${type}`}>
       <div className="title">
         <div className="title-content">{title}</div>
-        <div className="title-tips">
-          <Tooltip overlay={tip} placement={align}>
-            <QuestionCircleOutlined />
-          </Tooltip>
-        </div>
+        {!!showTip && (
+          <div className="title-tips">
+            <Tooltip overlay={tip} placement={align}>
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </div>
+        )}
       </div>
       <div className="number">{formatNumber(number)}</div>
     </div>
