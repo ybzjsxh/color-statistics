@@ -7,6 +7,8 @@ import '../assets/bootstrap.css';
 
 export interface StatisticsProps {
   style?: React.CSSProperties;
+  titleStyle?: React.CSSProperties;
+  numberStyle?: React.CSSProperties;
   type?: 'primary' | 'success' | 'warning' | 'info';
   title: string | React.ReactNode;
   tip?: string | React.ReactNode;
@@ -32,6 +34,8 @@ const Statistics = (props: StatisticsProps, ref: any) => {
     number,
     showTip = true,
     style = {},
+    titleStyle = {},
+    numberStyle = {},
   } = props;
 
   const domRef = useRef(null);
@@ -40,7 +44,9 @@ const Statistics = (props: StatisticsProps, ref: any) => {
   return (
     <div className={`container-${type}`} style={style}>
       <div className="title">
-        <div className="title-content">{title}</div>
+        <div className="title-content" style={titleStyle}>
+          {title}
+        </div>
         {!!showTip && (
           <div className="title-tips">
             <Tooltip overlay={tip} placement={align}>
@@ -49,7 +55,9 @@ const Statistics = (props: StatisticsProps, ref: any) => {
           </div>
         )}
       </div>
-      <div className="number">{formatNumber(number)}</div>
+      <div className="number" style={numberStyle}>
+        {formatNumber(number)}
+      </div>
     </div>
   );
 };

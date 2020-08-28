@@ -60,13 +60,16 @@ Online examples: [github-pages](https://ybzjsxh.github.io/color-statistics/?path
 
 ### Props
 
-|  name   |        type         |  default  |                                        description                                         |
-| :-----: | :-----------------: | :-------: | :----------------------------------------------------------------------------------------: |
-|  type   |       string        | 'primary' |                      one of ['primary', 'success', 'warning', 'info']                      |
-|  align  |       string        |  'right'  | one of ['left','right','top','bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight'] |
-| showTip |  boolean \| string  |   true    |                                    show tip icon or not                                    |
-|   tip   | string \| ReactNode |    ''     |                                         tips info                                          |
-| number  |  string \| number   |           |                                           number                                           |
+|     name     |        type         |  default  |                                        description                                         |
+| :----------: | :-----------------: | :-------: | :----------------------------------------------------------------------------------------: |
+|    style?    | React.CSSProperties |    {}     |                                   custom container style                                   |
+| titleStyle?  | React.CSSProperties |    {}     |                                     custom title style                                     |
+| numberStyle? | React.CSSProperties |    {}     |                                    custom number style                                     |
+|     type     |       string        | 'primary' |                      one of ['primary', 'success', 'warning', 'info']                      |
+|    align     |       string        |  'right'  | one of ['left','right','top','bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight'] |
+|   showTip    |  boolean \| string  |   true    |                                    show tip icon or not                                    |
+|     tip      | string \| ReactNode |    ''     |                                         tips info                                          |
+|    number    |  string \| number   |           |                                           number                                           |
 
 ## Development
 
