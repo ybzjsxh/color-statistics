@@ -6,6 +6,7 @@ import './index.css';
 import '../assets/bootstrap.css';
 
 export interface StatisticsProps {
+  style?: React.CSSProperties;
   type?: 'primary' | 'success' | 'warning' | 'info';
   title: string | React.ReactNode;
   tip?: string | React.ReactNode;
@@ -23,13 +24,21 @@ export interface StatisticsProps {
 }
 
 const Statistics = (props: StatisticsProps, ref: any) => {
-  const { type = 'primary', tip = '', title, align = 'right', number, showTip = true } = props;
+  const {
+    type = 'primary',
+    tip = '',
+    title,
+    align = 'right',
+    number,
+    showTip = true,
+    style = {},
+  } = props;
 
   const domRef = useRef(null);
   useImperativeHandle(ref, () => domRef.current);
 
   return (
-    <div className={`container-${type}`}>
+    <div className={`container-${type}`} style={style}>
       <div className="title">
         <div className="title-content">{title}</div>
         {!!showTip && (
