@@ -9,6 +9,7 @@ export interface StatisticsProps {
   style?: React.CSSProperties;
   titleStyle?: React.CSSProperties;
   numberStyle?: React.CSSProperties;
+  tipStyle?: React.CSSProperties;
   type?: 'primary' | 'success' | 'warning' | 'info';
   title: string | React.ReactNode;
   tip?: string | React.ReactNode;
@@ -30,12 +31,13 @@ const Statistics = (props: StatisticsProps, ref: any) => {
     type = 'primary',
     tip = '',
     title,
-    align = 'right',
+    align = 'bottom',
     number,
     showTip = true,
     style = {},
     titleStyle = {},
     numberStyle = {},
+    tipStyle = {},
   } = props;
 
   const domRef = useRef(null);
@@ -49,7 +51,7 @@ const Statistics = (props: StatisticsProps, ref: any) => {
         </div>
         {!!showTip && (
           <div className="title-tips">
-            <Tooltip overlay={tip} placement={align}>
+            <Tooltip overlay={tip} placement={align} overlayStyle={tipStyle}>
               <QuestionCircleOutlined />
             </Tooltip>
           </div>

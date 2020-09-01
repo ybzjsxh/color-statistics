@@ -65,6 +65,7 @@ Online examples: [github-pages](https://ybzjsxh.github.io/color-statistics/?path
 |    style?    | React.CSSProperties |    {}     |                                   custom container style                                   |
 | titleStyle?  | React.CSSProperties |    {}     |                                     custom title style                                     |
 | numberStyle? | React.CSSProperties |    {}     |                                    custom number style                                     |
+|  tipStyle?   | React.CSSProperties |    {}     |                                      custom tip style                                      |
 |     type     |       string        | 'primary' |                      one of ['primary', 'success', 'warning', 'info']                      |
 |    align     |       string        |  'right'  | one of ['left','right','top','bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight'] |
 |   showTip    |  boolean \| string  |   true    |                                    show tip icon or not                                    |
